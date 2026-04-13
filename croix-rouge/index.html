@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Croix-Rouge</title>
+</head>
+<body style="margin:0;background:black;text-align:center">
+
+<img id="img" style="max-width:100%;max-height:100vh">
+
+<script>
+const slides = [
+  "slides/001.jpg",
+  "slides/002.jpg",
+  "slides/003.jpg"
+];
+
+let i = 0;
+
+function show() {
+  document.getElementById("img").src = slides[i];
+}
+
+function next() {
+  i = (i + 1) % slides.length;
+  show();
+}
+
+setInterval(next, 4000);
+
+show();
+</script>
+
+</body>
+</html>
